@@ -1,0 +1,11 @@
+<header id="header">
+    <h1><%= themeConfig.siteName %></h1>
+    <p><%- themeConfig.siteDescription %></p>
+    <ul class="icons">
+        <% ['github', 'twitter', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
+            <% if (site.customConfig[item]) { %>
+            <li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label"><%= item %></span></a></li>
+            <% } %>
+        <% }) %>
+    </ul>
+</header>
